@@ -2,9 +2,13 @@ var ghpages = require("gh-pages");
 
 var filePath = "dist/codeine-scene-gh-io"
 
-console.log("Publishing " + filePath + " to branch gh-pages");
+var options = {
+    branch: "master"
+};
 
-ghpages.publish(filePath, function(err){
-    console.err("Failed to publish " + filePath + " to branch gh-pages");
+console.log("Publishing " + filePath + " to branch " + options.branch);
+
+ghpages.publish(filePath, options, function(err){
+    console.err("Failed to publish " + filePath);
     console.err(err);
 });
