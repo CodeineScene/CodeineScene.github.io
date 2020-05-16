@@ -3,7 +3,8 @@ var ghpages = require("gh-pages");
 var filePath = "dist/codeine-scene-gh-io"
 
 var options = {
-    branch: "master"
+    branch: "master",
+    repo: "https://github.com/CodeineScene/CodeineScene.github.io.git"
 };
 
 console.log("Publishing " + filePath + " to branch " + options.branch);
